@@ -33,17 +33,17 @@ const Home: React.FC = () => {
         <h2>Serviços</h2>
         <div className="services-grid">
           <div className="service-card">
-            <img src="caminho/para/icone1.png" alt="Serviço 1" />
+            <img src="/public/img/reformasResidenciais.png" alt="Serviço 1" />
             <h3>Reformas</h3>
             <p>Reformas residenciais e comerciais com qualidade e segurança.</p>
           </div>
           <div className="service-card">
-            <img src="caminho/para/icone2.png" alt="Serviço 2" />
+            <img src="/public/img/construcaoEdificios.png" alt="Serviço 2" />
             <h3>Construção</h3>
             <p>Construção de edifícios e infraestrutura com tecnologia avançada.</p>
           </div>
           <div className="service-card">
-            <img src="caminho/para/icone3.png" alt="Serviço 3" />
+            <img src="/public/img/manutencaoPreventiva.png" alt="Serviço 3" />
             <h3>Manutenção</h3>
             <p>Serviços de manutenção preventiva e corretiva.</p>
           </div>
@@ -53,7 +53,7 @@ const Home: React.FC = () => {
       <section id="quem-somos" className="section">
         <h2>Quem Somos</h2>
         <div className="about-content">
-          <img src="caminho/para/imagem-equipe.jpg" alt="Nossa Equipe" className="about-image" />
+          <img src="/public/img/icone-quem-somos.png" alt="Nossa Equipe" className="about-image" />
           <div className="about-text">
             <p>
               A DANTOLI Gestão e Facility é uma empresa especializada em serviços de construção civil,
@@ -77,20 +77,20 @@ const Home: React.FC = () => {
         <div className="clients-content">
           <p>Atendemos empresas de diversos segmentos com excelência. Aqui estão alguns dos nossos clientes:</p>
           <div className="clients-grid">
-            <img src="caminho/para/logo-cliente1.png" alt="Cliente 1" className="client-logo" />
-            <img src="caminho/para/logo-cliente2.png" alt="Cliente 2" className="client-logo" />
-            <img src="caminho/para/logo-cliente3.png" alt="Cliente 3" className="client-logo" />
-            <img src="caminho/para/logo-cliente4.png" alt="Cliente 4" className="client-logo" />
+            <img src="/public/img/tenda.png" alt="Cliente 1" className="client-logo" />
+            <img src="/public/img/hapvida-removebg-preview.png" alt="Cliente 2" className="client-logo" />
+            <img src="/public/img/mrv.png" alt="Cliente 3" className="client-logo" />
+            <img src="/public/img/DayHORCBahia-removebg-preview.png" alt="Cliente 4" className="client-logo" />
           </div>
           <h3>Depoimentos</h3>
           <div className="testimonials">
             <div className="testimonial">
               <p>"A DANTOLI realizou um excelente trabalho na reforma da nossa sede. Profissionais competentes e dedicados!"</p>
-              <p><strong>- Cliente A</strong></p>
+              <p><strong>Tenda/BA</strong></p>
             </div>
             <div className="testimonial">
               <p>"Recomendamos a DANTOLI pela qualidade dos serviços e pelo comprometimento com os prazos."</p>
-              <p><strong>- Cliente B</strong></p>
+              <p><strong>DayHorc/BA</strong></p>
             </div>
           </div>
           <a href="#contato" className="cta-button">Solicite um Orçamento</a>

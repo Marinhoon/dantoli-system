@@ -1,134 +1,140 @@
-@media (max-width: 768px) {
-  .navbar ul {
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  .services-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .header {
-    text-align: center;
-    padding: 100px 20px;
-    background-image: url("caminho/para/sua/imagem-de-fundo.jpg");
-    background-size: cover;
-    background-position: center;
-    color: white;
-    position: relative;
-    overflow: hidden;
-  }
-
-  .logo {
-    width: 250px;
-    max-width: 80%; 
-    height: auto;
-    margin-bottom: 20px;
-    position: relative;
-    z-index: 2;
-    animation: fadeIn 1s ease-in-out;
-  }
-
-  .header::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0.5);
-    z-index: 1;
-  }
-
-  .title {
-    font-size: 3rem;
-    margin-bottom: 20px;
-    position: relative;
-    z-index: 2;
-    animation: fadeInDown 1s ease-in-out; 
-  }
-
-  .subtitle {
-    font-size: 1.5rem;
-    position: relative;
-    z-index: 2;
-    animation: fadeInUp 1s ease-in-out; /* Animação de entrada */
-  }
-  
-  /* Animação para o título */
-  @keyframes fadeInDown {
-    0% {
-      opacity: 0;
-      transform: translateY(-20px);
-    }
-    100% {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-  
-  /* Animação para o subtítulo */
-  @keyframes fadeInUp {
-    0% {
-      opacity: 0;
-      transform: translateY(20px);
-    }
-    100% {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-  
-  /* Responsividade */
-  @media (max-width: 768px) {
-    .header {
-      padding: 60px 20px;
-    }
-  
-    .title {
-      font-size: 2rem;
-    }
-  
-    .subtitle {
-      font-size: 1.2rem;
-    }
-  }
-
-  .section {
-    padding: 30px;
-  }
+/* Estilos Gerais */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: #333;
 }
 
-.section {
-  padding: 50px;
-  text-align: center;
+/* Navbar */
+.navbar {
   background-color: #8c7c42;
+  padding: 15px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.navbar-links {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+  color: #ffcc00;
+}
+
+.mobile-menu-icon {
+  display: none;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+/* Header */
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 300px;
+  background-color: #f9f9f9;
+  background-image: url('caminho/para/sua/imagem-de-fundo.jpg');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.logo {
+  width: 750px;
+  max-width: 70%;
+  height: auto;
+  position: relative;
+  z-index: 2;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(255, 255, 255, 0.5);
+  z-index: 1;
+}
+
+.title {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  position: relative;
+  z-index: 2;
+  animation: fadeInDown 1s ease-in-out;
+  color: #8c7c42;
+}
+
+.subtitle {
+  font-size: 1.5rem;
+  position: relative;
+  z-index: 2;
+  animation: fadeInUp 1s ease-in-out;
+  color: #555;
+}
+
+/* Seções */
+.section {
+  padding: 20px;
+  text-align: center;
 }
 
 .section#servicos {
-  background-image: url("/public/img/reforma-fundo.jpg");
+  background-image: url('/public/img/reforma-fundo.jpg');
   background-size: cover;
-  color: white;
+  color: black;
+  padding: 50px 20px;
 }
 
 .section#quem-somos {
-  background-image: url("/public/img/quem-somos.jpg");
+  background-image: url('/public/img/quem-somos.jpg');
   background-size: cover;
-  color: white;
+  color: black;
 }
 
 .section#clientes {
-  background-image: url("/public/img/cliente.png");
+  background-image: url('/public/img/cliente.png');
   background-size: cover;
-  color: white;
+  color: black;
 }
 
 .section#contato {
-  background-image: url("/public/img/contato.jpg");
+  background-image: url('/public/img/contato.jpg');
   background-size: cover;
-  color: white;
+  color: black;
 }
 
+/* Serviços */
 .services-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -142,6 +148,22 @@
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   text-align: center;
+  color: black;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.service-card h3 {
+  color: #8c7c42;
+  margin-bottom: 10px;
+}
+
+.service-card p {
+  color: #333;
 }
 
 .service-card img {
@@ -150,6 +172,7 @@
   margin-bottom: 15px;
 }
 
+/* Formulário de Contato */
 .contact-form {
   display: flex;
   flex-direction: column;
@@ -172,26 +195,14 @@
   border: none;
   border-radius: 5px;
   cursor: pointer;
-}
-
-.contact-form button:hover {
-  background-color: #7a6b3a;
-}
-
-.navbar a:hover {
-  color: #ffcc00;
-}
-
-.service-card:hover {
-  transform: translateY(-10px);
-  transition: transform 0.3s ease;
-}
-
-.contact-form button:hover {
-  background-color: #7a6b3a;
   transition: background-color 0.3s ease;
 }
 
+.contact-form button:hover {
+  background-color: #7a6b3a;
+}
+
+/* Footer */
 .footer {
   background-color: #333;
   color: white;
@@ -207,12 +218,14 @@
   color: white;
   margin: 0 10px;
   text-decoration: none;
+  transition: color 0.3s ease;
 }
 
 .social-links a:hover {
   color: #ffcc00;
 }
 
+/* Quem Somos */
 .about-content {
   display: flex;
   align-items: center;
@@ -220,15 +233,16 @@
   max-width: 1200px;
   margin: 0 auto;
   padding: 20px;
+  color: black;
 }
 
 .about-image {
-  width: 50%;
+  width: 25%;
   border-radius: 10px;
 }
 
 .about-text {
-  width: 50%;
+  width: 80%;
   text-align: left;
 }
 
@@ -241,17 +255,7 @@
   margin-bottom: 10px;
 }
 
-@media (max-width: 768px) {
-  .about-content {
-    flex-direction: column;
-  }
-
-  .about-image,
-  .about-text {
-    width: 100%;
-  }
-}
-
+/* Clientes */
 .clients-content {
   max-width: 1200px;
   margin: 0 auto;
@@ -260,16 +264,25 @@
 }
 
 .clients-grid {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  flex-wrap: wrap;
-  margin: 20px 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  justify-items: center; 
+  align-items: center; 
+  max-width: 1200px; 
+  margin: 0 auto; 
+  padding: 10px;
 }
 
 .client-logo {
-  width: 100px;
+  width: 100%;
+  max-width: 150px; 
   height: auto;
+  transition: transform 0.3s ease;
+}
+
+
+.client-logo:hover {
+  transform: scale(1.1);
 }
 
 .testimonials {
@@ -286,6 +299,11 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   max-width: 300px;
   text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.testimonial:hover {
+  transform: translateY(-10px);
 }
 
 .testimonial p {
@@ -297,28 +315,7 @@
   margin-top: 10px;
 }
 
-@media (max-width: 768px) {
-  .clients-grid {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .testimonials {
-    flex-direction: column;
-    align-items: center;
-  }
-}
-
-.client-logo:hover {
-  transform: scale(1.1);
-  transition: transform 0.3s ease;
-}
-
-.testimonial:hover {
-  transform: translateY(-10px);
-  transition: transform 0.3s ease;
-}
-
+/* Botão CTA */
 .cta-button {
   display: inline-block;
   margin-top: 20px;
@@ -328,54 +325,49 @@
   text-decoration: none;
   border-radius: 5px;
   font-weight: bold;
+  transition: background-color 0.3s ease;
 }
 
 .cta-button:hover {
   background-color: #7a6b3a;
-  transition: background-color 0.3s ease;
 }
 
-.navbar {
-  background-color: #8c7c42;
-  padding: 15px 20px;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-}
-
-.navbar-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
-
-.mobile-menu-icon {
-  display: none;
-  background: none;
-  border: none;
-  color: white;
-  font-size: 1.5rem;
-  cursor: pointer;
-}
-
-.navbar-links {
-  display: flex;
-  gap: 30px;
-}
-
-.navbar-links.active {
-  display: flex;
-}
-
-@media (max-width: 768px) {
-  .mobile-menu-icon {
-    display: block;
+/* Animações */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
   }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
 
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
   .navbar-links {
     display: none;
     flex-direction: column;
@@ -391,5 +383,47 @@
   .navbar-links.active {
     display: flex;
   }
-}
 
+  .mobile-menu-icon {
+    display: block;
+  }
+
+  .header {
+    padding: 60px 20px;
+  }
+
+  .logo {
+    width: 200px;
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+
+  .subtitle {
+    font-size: 1.2rem;
+  }
+
+  .about-content {
+    flex-direction: column;
+  }
+
+  .about-image,
+  .about-text {
+    width: 100%;
+  }
+
+  .clients-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .testimonials {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .section {
+    padding: 30px;
+  }
+}
